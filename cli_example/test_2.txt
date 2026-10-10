@@ -1,0 +1,27 @@
+Echo Break reason: [Loop [
+    Set A ""; Set B ""
+
+    Con.Write "Value A: "
+    Set A [Con.Read]
+    If [Calc [Get A] == ""] [Break "No A"]
+
+    Con.Write "Value B: "
+    Set B [Con.Read]
+    If [Calc [Get B] == ""] [Break "No B"]
+
+    Set Res [Try [Calc [Get A] + [Get B]]]
+
+    If [IsError [Get Res]] [
+        Echo Equasion failed!
+        Continue
+    ]
+    
+    Echo A + B = [Get Res]
+    Echo Round(A + B) = [Math.Round [Get Res]]
+]]
+
+Set I 0
+While [Calc [Get I] < 10] [
+    Set I [Calc [Get I] + 1]
+    Echo I is [Get I]
+]

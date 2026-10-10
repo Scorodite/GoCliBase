@@ -1,0 +1,10 @@
+Con.Write "A: "
+Set A [Con.Read]
+Con.Write "B: "
+Set B [Con.Read]
+
+If [Calc [Get A] == "" || [Get B] == ""] [
+    Echo A or B was not provided
+] [
+    Echo A + B = [Calc [Get A] + [Get B]]
+]
