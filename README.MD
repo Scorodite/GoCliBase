@@ -69,7 +69,13 @@ func (c *ExampleCli) Sum(a, b float64) float64 {
 }
 ```
 
-### Method commands
+### Interactive console
+```
+>> Sum 10 3
+        13
+```
+
+## Method commands
 
 Methods can receive next arguments:
 `int`, `int8-64`, `uint8-64`, `float32-64`, `bool`, `string`
@@ -90,12 +96,6 @@ More complex examples of method commands can be found there:
  - [libmath.go](cli/libmath.go)
  - [libstrings.go](cli/libstrings.go)
  - [libvars.go](cli/libvars.go)
-
-### Interactive console
-```
->> Sum 10 3
-        13
-```
 
 ## Example
 This code can be executed with 'cli_example' package
