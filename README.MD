@@ -104,10 +104,12 @@ This code can be executed with 'cli_example' package
 Echo Break reason: [Loop [
     Set A ""; Set B ""
 
-    Set A [Read "Value A: "]
+    Con.Write "Value A: "
+    Set A [Con.Read]
     If [Calc [Get A] == ""] [Break "No A"]
 
-    Set B [Read "Value B: "]
+    Con.Write "Value B: "
+    Set B [Con.Read]
     If [Calc [Get B] == ""] [Break "No B"]
 
     Set Res [Try [Calc [Get A] + [Get B]]]
