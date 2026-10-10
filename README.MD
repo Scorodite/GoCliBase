@@ -145,33 +145,50 @@ I is 10
 ## Special commands
 
 'If' executes body if condition is true
+
 `If [Condition] [TrueBody]`
+
 It can also execute false body if conditon is false
 in such case other body will not be executed
+
 `If [Condition] [TrueBody] [FalseBody]`
 
+
 'While' executes body while condition is true
+
 `While [Condition] [Body]`
 
-'Loop' executes body repeatedly without condition
-it must be interrupted with 'Break' command
+
+'Loop' executes body repeatedly without condition. It must be interrupted with 'Break' command
+
 `Loop [Body]`
 
+
 'Break' stops cyclic commands from execution
+
 `Break`
+
+
 It can return value from loop if required
+
 `Break [Value]`
+
 
 'Continue' makes cyclic commands to execute
 body from the beginning
+
 `Continue`
 
-'Try' attempts to execute body and returns error
-with "error:" prefix if execution was not successful
+
+'Try' attempts to execute body and returns error with "error:" prefix if execution was not successful
+
 `Try [Body]`
 
+
 'Yield' returns provided value
+
 `Yield [Value]`
+
 it can be used to return constant value inside subcommand:
 ```
 If [Calc [Try [Command; Yield OK]] == OK] [
