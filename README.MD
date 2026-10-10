@@ -79,6 +79,7 @@ func (c *ExampleCli) Sum(a, b float64) float64 {
 
 Methods can receive next arguments:
 `int`, `int8-64`, `uint8-64`, `float32-64`, `bool`, `string`
+
 Also, they can receive arguments that implement next interface:
 ```go
 type ParseableCliArgument interface {
@@ -86,9 +87,13 @@ type ParseableCliArgument interface {
 }
 ```
 `source` is method owner, that was passed in `RegisterMethod`
+
 Example of `ParseableCliArgument` implementation can be found at [sequence.go](cli_example/sequence.go)
+
 Methods can return no value, any type single value, error or (any type, error)
+
 You can find example code of method commands at [cli.go](cli_example/cli.go)
+
 More complex examples of method commands can be found there:
  - [libbase.go](cli/libbase.go)
  - [libconsole.go](cli/libconsole.go)
