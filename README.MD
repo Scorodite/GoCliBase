@@ -58,7 +58,7 @@ func CreateExampleCli() *ExampleCli {
         res, // Method owner
         "Sum", // Method name
         "Summarizes two digits", // About command
-        "A", "B" // Argument names
+        "A", "B", // Argument names
     )
 
 	return res
